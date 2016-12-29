@@ -1,0 +1,42 @@
+<!-- Ë½ÐÅ¹ÜÀí -->
+	<action name="Message" class="weibo.action.MessageAction">
+		<result name="message" type="redirectAction">
+              <param name="actionName">msgList</param>
+              <param name="pageNumber">1</param>
+              <param name="namespace">/</param>
+              </result>
+	</action>
+	<action name="Msglist" class="weibo.action.MessageAction" method="msglist">
+		<result name="messages">/messages.jsp</result>
+	</action>
+	<action name="Frommsglist" class="weibo.action.MessageAction" method="frommsglist">
+		<result name="frommessage">/frommessages.jsp</result>
+	</action>
+	<action name="fmsgRemove" class="weibo.action.MessageAction" method="fmsgRemove" >
+		<result name="fmsgremoves" type="redirectAction" >
+              <param name="actionName">frommsgList</param>
+              <param name="pageNumber">1</param>
+              <param name="namespace">/</param>
+        </result>
+	</action>
+	<action name="msgRemove" class="weibo.action.MessageAction" method="msgRemove" >
+		<result name="msgremoves" type="redirectAction" >
+              <param name="actionName">msgList</param>
+              <param name="pageNumber">1</param>
+              <param name="namespace">/</param>
+        </result>
+	</action>	
+	<action name="smsgRemove" class="weibo.action.MessageAction" method="smsgRemove" >
+		<result name="smsgremoves" type="redirectAction" >
+              <param name="actionName">systemList</param>
+              <param name="pageNumber">1</param>
+              <param name="namespace">/</param>
+        </result>
+	</action>
+	<action name="validatemsgtoName" class="weibo.action.MessageAction" method="validatemsgtoName">
+	</action> 
+
+
+	<action name="Noticelist" class="weibo.action.MessageAction" method="noticelist">
+		<result name="noticelist">/MyBlog/mynotice.jsp</result>
+	</action>
